@@ -1,6 +1,6 @@
 # Lithos Mass Tools
 
-Lithos Mass Tools is a collection of Python scripts for various automated tasks, including username checking, generation, password strength checking, and webhook testing.
+Lithos Mass Tools is a collection of Python scripts for various automated tasks, including username checking, generation, password strength checking, and webhook testing. (Join https://discord.gg/wmENPXxCAD and make a purchase ticket to get the .rar password)
 
 ## Features
 
