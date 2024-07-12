@@ -1,59 +1,41 @@
-# Roblox Toolset
+# Lithos Mass Tools
 
-This is a Python toolset for interacting with Roblox, including functionalities for checking username availability and displaying moderation data.
+Lithos Mass Tools is a collection of Python scripts for various automated tasks, including username checking, generation, password strength checking, and webhook testing. (Join https://discord.gg/wmENPXxCAD and make a purchase ticket to get the .rar password)
 
 ## Features
 
-1. **Username Availability Checker**: Check the availability of Roblox usernames within a specified length range and optionally match a given pattern.
-2. **Display Not Approved Data**: Display moderation data for a given `.ROBLOSECURITY` and `.RBXIDCHECK` cookie.
-3. **Concurrent Username Checks**: Improve performance by checking multiple usernames concurrently.
-4. **Configuration File**: Load configurable parameters from a `config.yaml` file.
+- **Username Checker**: Checks the availability of usernames on Roblox using asyncio and aiohttp.
+- **Username Generator**: Generates random usernames of specified lengths.
+- **Password Strength Checker**: Evaluates the strength of passwords based on length.
+- **Webhook Tester**: Sends test messages to webhooks for verification.
 
 ## Requirements
 
-- Python 3.6+
-- `aiohttp`
-- `colorama`
-- `requests`
-- `tqdm`
-- `pyyaml`
+- Python 3.7+
+- aiohttp
+- tqdm
+- colorama
 
-## Installation
+## Setup
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/roblox-toolset.git
-    cd roblox-toolset
-    ```
+1. **Installation**:
+   - Clone the repository: `git clone https://github.com/your/repository.git`
+   - Install dependencies: `pip install -r requirements.txt`
 
-2. Install the required Python packages:
-    ```sh
-    pip install -r requirements.txt
-    ```
+2. **Configuration**:
+   - Edit `main.py` to set your preferred webhook URL (`webhook_url = "https://your-webhook-url-here"`).
 
-3. Create a `config.yaml` file in the root directory with your webhook URL:
-    ```yaml
-    webhook_url: "your_webhook_url_here"
-    ```
+3. **Usage**:
+   - Run `main.py` and follow the on-screen prompts to choose a tool:
+     ```bash
+     python main.py
+     ```
 
-## Usage
+## Usage Examples
 
-1. Run the script:
-    ```sh
-    python main.py
-    ```
+### Checking Usernames
 
-2. Follow the on-screen prompts:
-    - **1. Username Availability Checker**: 
-        - Enter the minimum and maximum username length.
-        - Enter the number of usernames to check per length.
-        - Optionally, enter a username pattern to match.
-    - **2. Display Not Approved Data**:
-        - Enter your `.ROBLOSECURITY` and `.RBXIDCHECK` cookies.
-    - **3. Exit**: 
-        - Exit the tool.
+```python
+from main import open_username_checker
 
-## Example `config.yaml`
-
-```yaml
-webhook_url: "your_webhook_url_here"
+open_username_checker()
